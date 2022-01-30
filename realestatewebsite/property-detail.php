@@ -207,7 +207,7 @@ if(!$imgresult){
       <div class="carousel-inner">
       	<!-- Item 0 -->
         <div class="item active">
-          <img src="images/properties/default.jpg" class="properties" alt="properties" />
+          <img src="images/properties/default.png" class="properties" alt="properties" />
         </div>
         <!-- #Item 0 -->
 
