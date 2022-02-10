@@ -7,9 +7,9 @@ if(isset($_POST['submit'])){
 	$search_price = $_POST['search_price'];
 	$property_type = $_POST['property_type'];
 
-	if(empty($search_value) or empty($search_price) or empty($delivery_type) or empty($property_type)){
-		header ("Location: index.php");
-	}
+	#if(empty($search_value) or empty($search_price) or empty($delivery_type) or empty($property_type)){
+	#	header ("Location: index.php");
+	#}
 
 	if($search_price == 1){
 		$query = "select * from properties where (property_title LIKE '%$search_value%' or property_details LIKE '%$search_value%' or property_address LIKE '%$search_value%' or property_type LIKE '%$search_value%') and (delivery_type = '$delivery_type') and (property_type = '$property_type') and (price >= 5000 and price <= 50000)";

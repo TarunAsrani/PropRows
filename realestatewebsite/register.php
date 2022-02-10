@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from thebootstrapthemes.com/live/thebootstrapthemes-realestate/about.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Apr 2017 02:43:16 GMT -->
+<!-- Mirrored from thebootstrapthemes.com/live/thebootstrapthemes-realestate/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Apr 2017 02:45:26 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>About Us - Prop Rows</title>
+<title>Registration - Prop Rows</title>
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -79,7 +78,7 @@
 
 <!-- Header Starts -->
 <div class="header">
-<a href="index.php"><img src="images/pngegg.png" alt="Realestate" width=10%></a>
+<a href="index.php"><img src="images/pngegg.png" width=10% alt="Realestate"></a>
 
             <div class="menu">
               <ul class="pull-right">
@@ -98,7 +97,7 @@
 </div><!-- banner -->
 <div class="inside-banner">
   <div class="container">
-    <h2>About Us</h2>
+    <h2>Agent Register</h2>
 </div>
 </div>
 <!-- banner -->
@@ -106,15 +105,28 @@
 
 <div class="container">
 <div class="spacer">
-<div class="row">
-  <div class="col-lg-8  col-lg-offset-2">
-  <img src="images/about.jpg" class="img-responsive thumbnail"  alt="realestate">
-  <h3>Business Background</h3>
-  <p> A Tradition of Excellence, Integrity, Knowledge and Service for over 10 years.</p>
-  <h3>Company Profile</h3>
-  <p>At Prop Rows Real Estate, you are number one. Whether you are a property owner, tenant, or buyer, we value your business and will provide you with the individual attention and service you deserve. We believe in a strict Code of Ethics. We believe in integrity, commitment to excellence, a professional attitude, and personalized care.</p>
-  <p>Prop Rows provides a wide variety of real estate services to investors. We understand that you do not want to be in the business of real estate and property management.</p>
-  </div>
+<div class="row register">
+  <div class="col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 ">
+<?php 
+				parse_str($_SERVER['QUERY_STRING'], $query_params);
+			?>
+				<div class="alert alert-danger" role="alert"><?php echo $query_params['error']; ?></div>
+	<form action="registerAgent.php" method="post" >
+                <input type="text" class="form-control" placeholder="Full Name" name="agent_name">
+                <input type="text" class="form-control" placeholder="Enter Email" name="agent_email">
+                <input type="text" class="form-control" placeholder="Enter Phone" name="agent_contact">
+                <input type="text" class="form-control" placeholder="Enter Address" name="agent_address">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+                <input type="password" class="form-control" placeholder="Confirm Password" name="pass_confirm">
+
+                
+      <button type="submit" class="btn btn-success" name="Submit">Register</button>
+      </form>
+
+
+
+
+        </div>
 
 </div>
 </div>
@@ -159,7 +171,7 @@
                     <h4>Contact us</h4>
                     <p><b>Prop Rows</b><br>
                       <span class="glyphicon glyphicon-map-marker"></span>Pune<br>
-                      <span class="glyphicon glyphicon-envelope"></span> tarunhans2907@gmail.com jaygajbhar@gmail.com<br>
+                      <span class="glyphicon glyphicon-envelope"></span> tarunhans2907@gmail.com<br>
                       <span class="glyphicon glyphicon-earphone"></span> +91-xxx-xxx-xxxx</p>
             </div>
         </div>
@@ -211,5 +223,5 @@
 
 </body>
 
-<!-- Mirrored from thebootstrapthemes.com/live/thebootstrapthemes-realestate/about.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Apr 2017 02:43:40 GMT -->
+<!-- Mirrored from thebootstrapthemes.com/live/thebootstrapthemes-realestate/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Apr 2017 02:45:26 GMT -->
 </html>
